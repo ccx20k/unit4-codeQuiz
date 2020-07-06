@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <!--header contains the link to the score board and the STATIC timer (fix that later)-->
+        <header>
+            <div class="row">
+                <div class="col-2">
+                    <a href="###">Leader Board</a>
+                </div>
+                <div class="col-8"></div>
+                <div class="col-2">
+                    Timer: 75
+                </div>
+            </div>
+        </header>
+
+        <!-- WELCOME AREA -- when the page loads this is what will display to the user first - once they start the game this needs to disapear as it is no longer useful-->
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <div id="welcome">
+                    <h1>Welcome to the Code Quiz!</h1>
+                    <p id="para">Try your best to answer all of the questions correctly! The clock will begin as soon as
+                        you hit the start button. Good luck!</p>
+                    <button id="start-btn">Start Quiz</button>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+
+        <!--QUESTION AREA- this is going to first fill with the first question in the array when START QUIZ button is clicked and then have each subsequent question added upon selecting an answer-->
+        <div id="q-box" class="d-none"> <!--this d-none tag keeps everything hidden but still existent so that you can call it out with JS when the sequence is ready-->
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <h3 id="q-text">Question Text Here</h3>
+                    <ol id="anw-list">
+                        <!--the multiple choice answers are filled in here-->
+                    </ol>
+                    <div class="alert alert-success d-none" role="alert">
+                        Correct!
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                        Wrong!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- End of quiz message -->
+        <div id="endOfQuiz" class="d-none mt-4">
+            <div class="alert alert-primary" role="alert">
+                <p>Thank you for playing!</p>
+                <h2>Your final score is: <span id="finalScore">0</span> points!</h2>
+            </div>
+            <div id="scoreBoard">
+                <h4>To add you score to the leaderboard, please enter your initials:</h4>
+                <div class="form-inline">
+                    <label for="playerInitials" class="ml-2">Initials: </label>
+                    <input type="text" class="form-control ml-2" id="playerInitials" placeholder="ABC" maxlength="3">
+                    <button type="button" class="btn btn-outline-primary ml-2" id="submitInitials">Submit</button> <span
+                        id="saved" class="ml-2 text-success d-none">Score added!</span>
+                </div>
+            </div>
+            <table class="table table-striped mt-4">
+                <thead>
+                    <tr>
+                        <th scope="col">INITIALS</th>
+                        <th scope="col">SCORE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="storedInitials">AAA</td>
+                        <td id="storedScore">000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+    <script href="script.js"></script>
+</body>
+
+</html>
