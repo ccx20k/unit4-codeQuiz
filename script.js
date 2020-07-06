@@ -1,3 +1,8 @@
+//Global variable list 
+var startBtn = document.getElementById("start-btn");
+
+
+//Variable containing the question array, keys and properties. 
 var questions = [
   {
   title: "Commonly used data types DO NOT include:",
@@ -32,6 +37,18 @@ var questions = [
 //CONTROLING DATA
 ///WHAT DATA ARE WE TRYING TO CONTROL?
 ////THE DATA WITHIN THE ARRAY OF QUESTIONS IS WHAT WE ARE TRYING TO CONTROL 
+
+//STEP 1:
+//the button on the begining page needs to start the:
+////a. timer at seconds = array.length * 15000(15 seconds)
+////b. needs to hide the start button/welcome box 
+////c. needs to bring in the new information from the question array 
+
+
+startBtn.addEventListener("click" function() {
+
+});
+
 
 //CONTROLING UI
 ///WHAT PARTS OF THE UI ARE WE TRYING TO CONTROL?
