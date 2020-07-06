@@ -45,7 +45,7 @@ var questions = [
 ////c. needs to bring in the new information from the question array 
 
 
-startBtn.addEventListener("click" function() {
+startBtn.addEventListener("click", function() {
 
   var wlcmBox = document.getElementById("welcome-box");
   wlcmBox.classList.add("d-none"); // hides the the class welcome box by addint bootstrap d-none
