@@ -47,6 +47,9 @@ var questions = [
 
 startBtn.addEventListener("click" function() {
 
+  var wlcmBox = document.getElementById("welcome-box");
+  wlcmBox.classList.add("d-none"); // hides the the class welcome box by addint bootstrap d-none
+
 });
 
 
