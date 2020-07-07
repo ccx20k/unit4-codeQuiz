@@ -1,5 +1,5 @@
 //Global variable list 
-let sec = 75
+let sec = 10 //needs to be global so we can subtract for it with the wrong answer function
 
 //Variable containing the question array, keys and properties. 
 var questions = [
@@ -39,17 +39,28 @@ $(document).ready(function () {
     $("#welcome-box").hide();// hides the welcome box and all of its contents
     $("#q-box").show();// shows the question box 
   });
+
+  // TIMER FUNCTIONALITY
+  ////LEAVE THE SUBTRACTED TIEM FOR WRONG ANSWER IN THE QUESTIONS FUNCTION!
+  var timer = setInterval(function () {
+    $("#timer").text(sec--);
+    if (sec == -1) {
+      clearInterval(timer);
+      $("#q-box").hide();
+      $("#endOfQuiz").show();
+      //need to link this to the end page for if the questions arent all answered.. 
+    }
+  }, 1000);
 });
 
-// TIMER FUNCTIONALITY
-////LEAVE THE SUBTRACTED TIEM FOR WRONG ANSWER IN THE QUESTIONS FUNCTION!
-var timer = setInterval(function () {
-  $("#timer").text(sec--);
-  if (sec == -1) {
-    clearInterval(timer);
-    //need to link this to the end page for if the questions arent all answered.. 
-  }
-}, 1000);
+// POPULATE QUESTIONS
+
+
+
+
+
+
+
 
 //////////=====  QUIZ LOGIC   =====//////////
 
