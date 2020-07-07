@@ -44,9 +44,12 @@ var questions = [
 ////b. needs to hide the start button/welcome box 
 ////c. needs to bring in the new information from the question array 
 
-$(".start-btn").click(function() {
-  $(this).hide(".welcome-box");
+$(document).ready(function(){
+  $("#start-btn").click(function() {
+    $("#welcome-box").hide();
+  });
 });
+
 
 
 //CONTROLING UI
