@@ -45,8 +45,10 @@ var questions = [
 ////c. needs to bring in the new information from the question array 
 
 $(document).ready(function(){
-  $("#start-btn").click(function() {
-    $("#welcome-box").hide();
+  $("#start-btn").on("click", function() {
+    console.log("sup dawg");
+    $("#welcome-box").hide();// hides the welcome box and all of its contents
+    $("#q-box").show();
   });
 });
 
