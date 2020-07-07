@@ -1,5 +1,5 @@
 //Global variable list 
-var startBtn = document.getElementById("start-btn");
+// var startBtn = document.getElementById("start-btn");
 
 
 //Variable containing the question array, keys and properties. 
@@ -44,12 +44,8 @@ var questions = [
 ////b. needs to hide the start button/welcome box 
 ////c. needs to bring in the new information from the question array 
 
-
-startBtn.addEventListener("click", function() {
-
-  var wlcmBox = document.getElementById("welcome-box");
-  wlcmBox.classList.add("d-none"); // hides the the class welcome box by addint bootstrap d-none
-
+$(".start-btn").click(function() {
+  $(this).hide(".welcome-box");
 });
 
 
